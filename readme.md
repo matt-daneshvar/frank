@@ -9,11 +9,13 @@ Was gonna call him Jafar, but then Frank sounded a notch nicer. It kind of refle
 
 ## About Code413
 We are a Malaysia-based data-driven digital agency specializing in enhancing your business through creative technology. 
-Wanna be an early Frank user :wink:? Maybe drop me a line at [matt@code413.io](mailto:matt@code413.io)
+
+Wanna be an early Frank user? ;)
+Maybe drop me a line at [matt@code413.io](mailto:matt@code413.io)
 
 
 
 ## License
 [MIT license](http://opensource.org/licenses/MIT)
 
-It's a work in progress mate; feel free to fork and spoon. 
+It's a work in progress; feel free to fork or spoon or do whatever you want with it.
