@@ -1,0 +1,35 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+.project .status
+{
+  font-size:1rem;
+}
+
+.activity .name
+{
+  display: inline-block;
+  width:200px;
+}
+
+.activity .duration
+{
+  height:2px;
+  background:blueviolet;
+  display: inline-block;
+}
+
+.activity.milestone .duration
+{
+  background: #ecb445;
+  width:5px !important;
+  height:5px;
+  border-radius:50%;
+}
