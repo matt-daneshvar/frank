@@ -27,7 +27,9 @@
                 @endforeach
             </ul>
 
-            <h2>Project Team</h2>
+            <h2>
+                <a href="{{ action('StakeholdersController@index', ['project' => $project->id]) }}">Project Team</a>
+            </h2>
             <div class="stakeholders">
                 @foreach($project->stakeholders as $stakeholder)
                     <div class="profile">
