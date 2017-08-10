@@ -8,28 +8,100 @@
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
-.project .status
+.status
 {
   font-size:1rem;
 }
 
-.activity .name
+.btn.btn-xs
 {
-  display: inline-block;
-  width:200px;
+  margin:0 10px;
 }
 
-.activity .duration
+.timeline
 {
-  height:2px;
-  background:blueviolet;
-  display: inline-block;
-}
+  position : relative;
+  background:white;
+  padding:2em 1em;
 
-.activity.milestone .duration
-{
-  background: #ecb445;
-  width:5px !important;
-  height:5px;
-  border-radius:50%;
+  .activity
+  {
+    height:30px;
+
+    .name
+    {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-right: 10px;
+      height:100%;
+      position : relative;
+    }
+
+    .duration
+    {
+      height:50%;
+      top:25%;
+      position : relative;
+
+      .fill
+      {
+        background:blueviolet;
+        position : absolute;
+        height:100%;
+        top:0;
+        color:white;
+        padding:0 5px;
+        font-size:10px;
+        font-family :Tahoma, sans-serif;
+      }
+    }
+
+    &.milestone
+    {
+      .duration
+      {
+        .fill
+        {
+          background:yellow;
+          width:4px !important;
+          margin-left:-2px;
+
+        }
+      }
+    }
+
+    .btn.btn-xs
+    {
+      vertical-align: text-bottom;
+      margin-left:0;
+    }
+  }
+
+  .today
+  {
+
+    position : absolute;
+    top:0;
+    right:0;
+    height:100%;
+
+    .indicator
+    {
+      width:1px;
+      height:100%;
+      border-left:dashed 1px #4dbf1b;
+      position:absolute;
+      top:0;
+      left:50%;
+
+      .label
+      {
+        position : absolute;
+        bottom:-20px;
+        color:#4dbf1b;
+        transform:translateX(-50%);
+      }
+    }
+  }
 }

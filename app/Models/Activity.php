@@ -13,8 +13,19 @@ class Activity extends Model
         'end'
     ];
 
+    protected $fillable = [
+        'name',
+        'start',
+        'end'
+    ];
+
     public function getDurationAttribute()
     {
         return $this->start->diffInDays($this->end);
+    }
+
+    public function timeline()
+    {
+        return $this->belongsTo(Timeline::class);
     }
 }

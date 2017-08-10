@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Timeline extends Model
 {
+    public function project()
+    {
+        return $this->belongsTo(Project::class);
+    }
+
     public function activities()
     {
         return $this->hasMany(Activity::class)->orderBy('start');
