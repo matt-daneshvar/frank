@@ -19,3 +19,11 @@ Maybe drop me a line at [matt@code413.io](mailto:matt@code413.io)
 [MIT license](http://opensource.org/licenses/MIT)
 
 It's a work in progress; feel free to fork or spoon or do whatever you want with it.
+
+## TODO
+- Brand management dashboard (for admins)
+- User management dashboard (for admins)
+- Role/permission management (for admins)
+- Complete user profiles (include avatars)
+- Github integration to display code updates
+- Discussion component
