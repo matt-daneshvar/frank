@@ -8,7 +8,7 @@
 
 
             <span class="details col-md-5">
-                @if(!empty($controls))
+                @if(!empty($controls) && $controls)
                     <form method="POST" action="{{ action('ActivitiesController@destroy', ['activity' => $activity->id]) }}" style="display: inline-block;">
                     {!! csrf_field() !!}
                         {!! method_field('DELETE') !!}

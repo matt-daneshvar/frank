@@ -5,7 +5,10 @@ Route::middleware(['auth'])->group(function()
     Route::get('/', 'ProjectsController@index');
     Route::get('projects/{project}', 'ProjectsController@show');
 
+    Route::get('users', 'UsersController@index');
     Route::get('users/{user}', 'UsersController@show');
+    Route::post('users', 'UsersController@store');
+    Route::delete('users/{user}', 'UsersController@destroy');
 
     Route::get('projects/{project}/links', 'LinksController@index');
     Route::post('projects/{project}/links', 'LinksController@store');
