@@ -5,6 +5,8 @@ Route::middleware(['auth'])->group(function()
     Route::get('/', 'ProjectsController@index');
     Route::get('projects/{project}', 'ProjectsController@show');
 
+    Route::resource('brands', 'BrandsController', ['only' => ['index', 'show', 'store', 'destroy']]);
+
     Route::get('users', 'UsersController@index');
     Route::get('users/{user}', 'UsersController@show');
     Route::post('users', 'UsersController@store');
