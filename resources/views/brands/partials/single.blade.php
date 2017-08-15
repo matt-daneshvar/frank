@@ -1,9 +1,6 @@
 <div class="link">
-    <form method="POST" action="{{ action('BrandsController@destroy', ['brand' => $brand->id]) }}" style="display: inline-block;">
-        {!! csrf_field() !!}
-        {!! method_field('DELETE') !!}
-        <button class="btn btn-xs btn-danger">Delete</button>
-    </form>
+    @include('partials.actions.delete', ['action' => action('BrandsController@destroy', ['brand' => $brand->id])])
+
 
     <a href="{{ action('BrandsController@show', ['brand' => $brand->id]) }}">
         {{ $brand->name }}

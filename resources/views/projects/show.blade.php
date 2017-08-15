@@ -5,7 +5,9 @@
         <div class="col-md-8">
             @include('projects.partials.header')
 
-            @include('timelines.partials.gantchart', ['timeline' => $project->timeline])
+            @if($project->timeline)
+                @include('timelines.partials.gantchart', ['timeline' => $project->timeline])
+            @endif
         </div>
         <div class="col-md-4">
             <h2>

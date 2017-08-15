@@ -8,20 +8,6 @@ class Project extends Model
 {
     protected $fillable = ['name'];
 
-    protected static function boot()
-    {
-        parent::boot();
-
-        Project::created(
-            function($project)
-            {
-                $timeline = Timeline::make();
-                $project->timeline()->save($timeline);
-            }
-        );
-
-    }
-
     public function stakeholders()
     {
         return $this->belongsToMany(User::class, 'project_user', 'project_id', 'user_id');
