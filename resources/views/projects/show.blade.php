@@ -27,7 +27,7 @@
             <div class="stakeholders">
                 @foreach($project->stakeholders as $stakeholder)
                     <div class="profile">
-                        @include('users.partials.single', ['user' => $stakeholder])
+                        @include('stakeholders.partials.single', ['user' => $stakeholder])
                     </div>
                 @endforeach
             </div>

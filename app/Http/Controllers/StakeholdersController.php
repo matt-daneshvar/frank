@@ -15,7 +15,7 @@ class StakeholdersController extends Controller
 
     public function store(Project $project, Request $request)
     {
-        $project->stakeholders()->sync([$request->get('stakeholder')], false);
+        $project->stakeholders()->sync([$request->get('stakeholder') => ['role_id' =>  $request->get('role')]], false);
 
         return back();
     }

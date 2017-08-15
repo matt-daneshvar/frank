@@ -5,7 +5,10 @@ namespace Frank\Models;
 use Illuminate\Database\Eloquent\Model;
 use Zizaco\Entrust\EntrustRole;
 
-class Role extends EntrustRole
+class Role extends Model
 {
-    //
+    public function permissions()
+    {
+        return $this->belongsToMany(Permission::class);
+    }
 }

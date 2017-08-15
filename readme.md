@@ -21,7 +21,7 @@ Maybe drop me a line at [matt@code413.io](mailto:matt@code413.io)
 It's a work in progress; feel free to fork or spoon or do whatever you want with it.
 
 ## TODO
-- Role/permission management (for admins)
+- Role/permission management per project (for admins)
 - Complete user profiles (include avatars)
 - Github integration to display code updates
 - Discussion component

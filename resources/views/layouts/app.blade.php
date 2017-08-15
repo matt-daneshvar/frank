@@ -36,8 +36,10 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        <li><a href="{{ action('UsersController@index') }}">Users</a></li>
                         <li><a href="{{ action('BrandsController@index') }}">Brands</a></li>
+                        <li><a href="{{ action('UsersController@index') }}">Users</a></li>
+                        <li><a href="{{ action('RolesController@index') }}">Roles</a></li>
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->

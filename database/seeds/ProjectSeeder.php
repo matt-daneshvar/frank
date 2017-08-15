@@ -20,9 +20,9 @@ class ProjectSeeder extends Seeder
 
             if($project->id <= 3)
             {
-                $project->stakeholders()->attach(1);
+                $project->stakeholders()->attach(1, ['role_id' => rand(1,3)]);
             }
-            $project->stakeholders()->syncWithoutDetaching([rand(2,5)]);
+            $project->stakeholders()->syncWithoutDetaching([rand(2,5) => ['role_id' => rand(1,3)]]);
         });
     }
 }
