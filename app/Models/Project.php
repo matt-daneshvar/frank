@@ -6,6 +6,22 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
+    protected $fillable = ['name'];
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        Project::created(
+            function($project)
+            {
+                $timeline = Timeline::make();
+                $project->timeline()->save($timeline);
+            }
+        );
+
+    }
+
     public function stakeholders()
     {
         return $this->belongsToMany(User::class, 'project_user', 'project_id', 'user_id');
@@ -24,5 +40,10 @@ class Project extends Model
     public function timeline()
     {
         return $this->hasOne(Timeline::class);
+    }
+
+    public function brand()
+    {
+        return $this->belongsTo(Brand::class);
     }
 }

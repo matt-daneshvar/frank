@@ -3,7 +3,9 @@
 Route::middleware(['auth'])->group(function()
 {
     Route::get('/', 'ProjectsController@index');
-    Route::get('projects/{project}', 'ProjectsController@show');
+
+    Route::post('brands/{brand}/projects', 'ProjectsController@store');
+    Route::resource('projects', 'ProjectsController', ['only' => ['show', 'destroy']]);
 
     Route::resource('brands', 'BrandsController', ['only' => ['index', 'show', 'store', 'destroy']]);
 
