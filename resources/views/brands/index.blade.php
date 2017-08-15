@@ -6,7 +6,7 @@
     @endforeach
 
     <hr/>
-    
+
     <form method="POST" action="{{ action('BrandsController@store') }}">
         {!! csrf_field() !!}
         <div class="form-group">

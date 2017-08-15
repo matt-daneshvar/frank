@@ -1,9 +1,8 @@
 <div class="user row">
-    <div class="col-md-1">
-        <span class="glyphicon glyphicon-user"></span>
-    </div>
-    <div class="col-md-11">
-        @if(!empty($controls) && $controls)
+    <div class="col-md-12">
+        <span class="glyphicon glyphicon-user"></span>&nbsp;
+
+    @if(!empty($controls) && $controls)
             <form method="POST" action="{{ action('UsersController@destroy', ['user' => $user->id]) }}" style="display: inline-block;">
                 {!! csrf_field() !!}
                 {!! method_field('DELETE') !!}
@@ -13,7 +12,6 @@
 
 
         <a href="{{ action('UsersController@show', ['user' => $user->id]) }}" class="name">{{ $user->name }}</a>
-        <br/>
-        <span class="position">{{ $user->position }}</span>
+        (<span class="position">{{ $user->position }}</span>)
     </div>
 </div>
