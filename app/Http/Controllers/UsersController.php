@@ -4,17 +4,15 @@ namespace Frank\Http\Controllers;
 
 use Frank\Models\User;
 use Illuminate\Http\Request;
+use MattDaneshvar\Rest\Rest;
 
 class UsersController extends Controller
 {
-    public function index()
-    {
-        return view('users.index', ['users' => User::all()]);
-    }
+    use Rest;
 
-    public function show(User $user)
+    protected function newModel()
     {
-        return view('users.show', ['user' => $user]);
+        return new User();
     }
 
     public function store(Request $request)
@@ -23,12 +21,6 @@ class UsersController extends Controller
         $user->password = bcrypt($request->get('password'));
         $user->save();
 
-        return back();
-    }
-
-    public function destroy(User $user)
-    {
-        $user->delete();
         return back();
     }
 }

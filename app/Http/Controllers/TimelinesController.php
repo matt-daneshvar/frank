@@ -3,12 +3,16 @@
 namespace Frank\Http\Controllers;
 
 use Frank\Models\Project;
+use Frank\Models\Timeline;
 use Illuminate\Http\Request;
+use MattDaneshvar\Rest\Rest;
 
 class TimelinesController extends Controller
 {
-    public function show(Project $project)
+    use Rest;
+
+    protected function newModel()
     {
-        return view('timelines.show', ['timeline' => $project->timeline]);
+        return new Timeline();
     }
 }
