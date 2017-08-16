@@ -11,19 +11,25 @@ class RolesSeeder extends Seeder
      */
     public function run()
     {
-        factory(\Frank\Models\Role::class)->create([
+        $role = factory(\Frank\Models\Role::class)->create([
             'name' => 'project-manager',
             'display_name' => 'Project Manager',
         ]);
 
-        factory(\Frank\Models\Role::class)->create([
+         $role->permissions()->sync([rand(1,10), rand(1,10), rand(1,10), rand(1,10), rand(1,10), rand(1,10), rand(1,10), rand(1,10), rand(1,10)]);
+
+        $role = factory(\Frank\Models\Role::class)->create([
             'name' => 'brand-rep',
             'display_name' => 'Brand Representative',
         ]);
 
-        factory(\Frank\Models\Role::class)->create([
+        $role->permissions()->sync([rand(1,10), rand(1,10), rand(1,10), rand(1,10), rand(1,10)]);
+
+        $role = factory(\Frank\Models\Role::class)->create([
             'name' => 'developer',
             'display_name' => 'Developer',
         ]);
+
+        $role->permissions()->sync([rand(1,10), rand(1,10), rand(1,10)]);
     }
 }

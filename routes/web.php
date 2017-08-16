@@ -9,7 +9,7 @@ Route::middleware(['auth'])->group(function()
 
     Route::resource('brands', 'BrandsController', ['only' => ['index', 'show', 'store', 'destroy']]);
 
-    Route::resource('roles', 'RolesController', ['only' => ['index', 'show', 'store', 'destroy']]);
+    Route::resource('roles', 'RolesController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
 
     Route::get('users', 'UsersController@index');
     Route::get('users/{user}', 'UsersController@show');

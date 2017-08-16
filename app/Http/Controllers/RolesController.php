@@ -14,4 +14,11 @@ class RolesController extends Controller
     {
         return new Role();
     }
+
+    public function update(Role $role, Request $request)
+    {
+        $role->permissions()->sync(array_keys($request->get('permission')));
+
+        return back();
+    }
 }
