@@ -25,3 +25,5 @@ It's a work in progress; feel free to fork or spoon or do whatever you want with
 - Complete user profiles (include avatars)
 - Github integration to display code updates
 - Discussion component
+- Email and SMS notifications
+- Notification settings per user and per project
